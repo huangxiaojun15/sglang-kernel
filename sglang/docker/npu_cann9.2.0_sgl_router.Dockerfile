@@ -128,7 +128,7 @@ ENV LC_ALL=en_US.UTF-8
 RUN git lfs install --system
 
 ### Install MemFabric and MemCache
-RUN ${PIP_INSTALL} memfabric-hybrid==1.3.1
+RUN ${PIP_INSTALL} memfabric-hybrid==1.5.0.dev20261119 --trusted-host ascend.devcloud.huaweicloud.com -i https://ascend.devcloud.huaweicloud.com/pypi/simple
 
 RUN ${PIP_INSTALL} modelscope evalscope pytest blake3 deepseek-recipe msgpack 
 
