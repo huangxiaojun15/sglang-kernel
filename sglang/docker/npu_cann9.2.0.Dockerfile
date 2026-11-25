@@ -135,7 +135,7 @@ RUN set -eux; \
       *)   echo "Unsupported DEVICE_TYPE for mfcli kernel install: $DEVICE_TYPE" >&2; \
            exit 1 ;; \
     esac; \
-    ${PIP_INSTALL} memfabric-hybrid==1.5.0.dev20261119 --trusted-host ascend.devcloud.huaweicloud.com -i https://ascend.devcloud.huaweicloud.com/pypi/simple; \
+    ${PIP_INSTALL} memfabric-hybrid==1.5.0.dev20261124 -i https://mirrors.huaweicloud.com/ascend/repos/pypi/nightly/; \
     mfcli kernel install --soc-version "$MF_SOC_VERSION";
 
 RUN ${PIP_INSTALL} \
